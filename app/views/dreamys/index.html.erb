@@ -27,13 +27,19 @@
 <div id="h_box_sp">
 <div class="h_box">
 <ul class="h_list">
-    <li><a href="faq.html">よくあるご質問</a></li>
+    <li><a href="faq.html">カレンダー</a></li>
+    <li><a href="contact.html">メモ</a></li>
       <li><a href="company.html">会社概要</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
+      
 </ul>
 <ul class="h_lang">
-    <li><a href="#" class="selected">日本語</a></li>
-    <li><a href="#">ENGLISH</a></li>
+     <% if user_signed_in? %>
+       <li><%= link_to current_user.nickname, "#", class: "user-nickname"  %></li>
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <% else %>
+       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
 </ul>
 </div>
 
