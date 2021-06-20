@@ -11,7 +11,7 @@
 	font-size: 55px;
 	display        : inline-block;
   color          : #ffffff;            /* 文字の色 */
-  font-size      : 36pt;               /* 文字のサイズ */
+  font-size      : 45pt;               /* 文字のサイズ */
   letter-spacing : 4px;                /* 文字間 */
   text-shadow    : 
        2px  2px 1px #003366,
@@ -22,6 +22,7 @@
        0px  2px 1px #003366,
       -2px  0px 1px #003366,
        0px -2px 1px #003366;   
+			 margin-left: -45vh;
 }
 
 html {
@@ -1130,14 +1131,12 @@ h2.h2_title_01 span {
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	
 }
 
 .service ul li,
 .staff ul li {
 	display: block;
-	width: 25%;
 	text-align: center;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -3021,6 +3020,11 @@ transform: scale(1.0);
 	padding: 3px;
 	background-color: white;
 	transition: all 1s;
+}
+
+body, p, form, input {
+	margin-top: 30px;
+
 }
 
 input[type="text"],
