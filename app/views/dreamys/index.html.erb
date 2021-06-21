@@ -22,14 +22,15 @@
   <video src="/assets/videos/mixkit-programmer-wfh-in-his-living-room-21249-medium_1.mp4" loop autoplay muted></video>
   
 
-<h1><a href="index.html"><%= image_tag "/assets/images/06062021055844A.png" %></a></h1>
+<h1><%= link_to image_tag("/assets/images/06062021055844A.png"), "/" %></h1>
+
 
 <div id="h_box_sp">
 <div class="h_box">
 <ul class="h_list">
-    <li><a href="calender.html">カレンダー</a></li>
-    <li><a href="memo.html">メモ</a></li>
-      <li><a href="company.html">会社概要</a></li>
+    <li><%= link_to 'カレンダー', tasks_index_path %></li>
+    <li><%= link_to 'メモ', tasks_new_path %></li>
+    <li><%= link_to '会社概要', tasks_show_path %></li>
       
 </ul>
 <ul class="h_lang">
@@ -114,7 +115,7 @@
 
 <nav id="g_navi">
     <ul class="navi_base">
-    <li><a href="index.html">TOP</a></li>
+      <li><%= link_to 'TOP', root_path %></li>
       <li><%= link_to 'メンバー紹介', users_path %></li>
       <li><%= link_to 'マイページ', '/users/show' %></li>
     </ul>

@@ -1149,6 +1149,7 @@ h2.h2_title_01 span {
 .staff ul li p {
 	font-size: 12px;
 	margin: 10px;
+	color: #000;
 }
 .service ul li a,
 .staff ul li a {
@@ -1160,6 +1161,7 @@ h2.h2_title_01 span {
 	font-size: 18px;
 	font-weight: normal;
 	font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "Sawarabi Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	color: #000;
 }
 .service ul li p .rubi,
 .staff ul li p .rubi {
