@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<%= javascript_pack_tag 'memo/application' %>
 
 </head>
 <body>
@@ -71,14 +72,10 @@
 
 
 <div id="to_top"><a href="#"><%= image_tag "/assets/images/backtotop.png", class: "topback" %></a></div>
-<%= javascript_include_tag '/javascript/script.js' %>
-<%= javascript_include_tag '/javascript/postcss.config.js' %>
-<%= javascript_include_tag '/javascript/jquery.inview.min.js' %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="jquery.inview.min.js"></script>
-<script src="script.js"></script>
+
+
 
 </body>
 </html>
