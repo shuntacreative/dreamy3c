@@ -16,6 +16,8 @@
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<%= javascript_pack_tag 'calender/application' %>
+
 
 </head>
 <body>
@@ -55,20 +57,25 @@
       
       </div>
 </header>
+<div class="tod">
+<h1 class="t1">ToDo List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;here&nbsp;&nbsp;↓</h1>
 
+<%= link_to '新規作成', new_done_path, class:"t2" %>
 
+<table>
+  
 
-
-
-<div class="content">
-<section class="staff">
-<h2 class="effect"><i class="fas fa-users"></i>メンバーリスト</h2>
-<% @users.each do |user| %>
-<ul>
-<li class="effect"><p><strong><%= user.nickname %><br/></strong><br>
-<p> <%= user.email %><br/></p>
-</li>
-<% end %>
+  <tbody class="d1">
+    <% @dones.each do |done| %>
+    <tr class="s1" >
+      <td class="s3"><%= done.body %>
+      <td class="s4"><%= link_to '編集', edit_done_path(done) %></td>
+      <td class="s5"><%= link_to '削除', done, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
 
 
@@ -83,6 +90,9 @@
 
 
 <div id="to_top"><a href="#"><%= image_tag "/assets/images/backtotop.png", class: "topback" %></a></div>
+
+
+
 
 </body>
 </html>

@@ -16,6 +16,8 @@
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<%= javascript_pack_tag 'calender/application' %>
+
 
 </head>
 <body>
@@ -55,20 +57,24 @@
       
       </div>
 </header>
-
-
-
-
-
-<div class="content">
-<section class="staff">
-<h2 class="effect"><i class="fas fa-users"></i>メンバーリスト</h2>
-<% @users.each do |user| %>
-<ul>
-<li class="effect"><p><strong><%= user.nickname %><br/></strong><br>
-<p> <%= user.email %><br/></p>
-</li>
+<div class="n1">
+<h1>ToDo add</h1>
+<% if @done.errors.any? %>
+  <div class="alert alert-warning">
+    <ul>
+      <% @done.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
+
+<%= form_for(@done) do |f| %>
+  <div><%= f.label :detail %></div>
+  <div><%= f.text_field :body %></div>
+  <div><input type="submit" value="追加" class="btn btn-success"></div>
+<% end %>
+<%= link_to '戻る', dones_path, class:"qwerty" %>
 </div>
 
 
@@ -83,6 +89,9 @@
 
 
 <div id="to_top"><a href="#"><%= image_tag "/assets/images/backtotop.png", class: "topback" %></a></div>
+
+
+
 
 </body>
 </html>
