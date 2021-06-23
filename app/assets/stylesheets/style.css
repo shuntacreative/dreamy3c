@@ -1115,6 +1115,7 @@ h2.h2_title_01 span {
 	background-position: center 59px;
 	padding-bottom: 15px;
 }
+
 .service ul,
 .staff ul {
 	display: -webkit-box;
@@ -1143,6 +1144,7 @@ h2.h2_title_01 span {
 	box-sizing: border-box;
 	padding: 20px;
 	color: #FFF;
+	
 }
 
 .service ul li p,
@@ -1150,6 +1152,7 @@ h2.h2_title_01 span {
 	font-size: 12px;
 	margin: 10px;
 	color: #000;
+	
 }
 .service ul li a,
 .staff ul li a {
