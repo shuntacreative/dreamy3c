@@ -343,7 +343,7 @@ a{color:inherit;text-decoration:none}
   z-index: 1;
   max-width: 90px;
   opacity: 1;
-  box-shadow: 0 0 15px rgb(0, 0, 0, );
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 .snip1336 .follow {
   margin-right: 4%;
@@ -450,7 +450,7 @@ header .h_btn a::after {
 header .h_btn a:hover {
 	color: #FFF;
 	box-shadow: rgb(0, 50, 150) 0px 0px 7px ;
-	-webkit-box-shadow: rgb(0, 50, 150 ) 0px 0px 7px 0px;
+	-webkit-box-shadow: rgb(0, 50, 150) 0px 0px 7px 0px;
 	-moz-box-shadow: rgb(0, 50, 150) 0px 0px 7px 0px;
 	background-color: #00365E;
 }
@@ -539,10 +539,10 @@ header .h_tel strong {
 header .h_tel a {
 	color: #FFF;
 	text-decoration: none;
-	-moz-text-shadow: 0px 0px 5px rgb(0, 0, 0);
--webkit-text-shadow: 0px 0px 5px rgb(0, 0, 0);
--ms-text-shadow: 0px 0px 5px rgb(0, 0, 0,);
-text-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+	-moz-text-shadow: 0px 0px 5px rgb(0, 0,0);
+-webkit-text-shadow: 0px 0px 5px rgb(0, 0,0);
+-ms-text-shadow: 0px 0px 5px rgb(0, 0, 0);
+text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
 
 header .h_tel i {
@@ -3004,7 +3004,7 @@ transform: scale(1.0);
 	width: 230px;
 	height: 230px;
 	border:2px solid #3498db;
-	box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgb(94,104,121,0.288);
+	box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgb(94,104,121);
 	border-radius: 50%;
 	background-color: black;
 	margin-top: 30px;
