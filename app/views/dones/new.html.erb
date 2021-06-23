@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>Dreamy</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<%= javascript_pack_tag 'calender/application' %>
+
+
+</head>
+<body>
+
+<header class="header_bg_03">
+
+    <nav id="g_navi">
+        <ul class="navi_base">
+       <li><%= link_to 'TOP', root_path %></li>
+      <li><%= link_to 'メンバー紹介', users_path %></li>
+      <li><%= link_to 'マイページ', '/users/show' %></li>
+    </ul>
+        </ul>
+      </nav>
+      
+      <div class="bg_bl"></div>
+      
+      <h1><%= link_to image_tag("/assets/images/06062021055844A.png"), "/" %></h1>
+      
+      <div id="h_box_sp">
+      <div class="h_box">
+      <ul class="h_list">
+            <li><%= link_to 'カレンダー', tasks_index_path %></li>
+            <li><%= link_to 'メモ', tasks_new_path %></li>
+            <li><%= link_to 'ToDo', dones_path %></li>
+      </ul>
+      <ul class="h_lang">
+          <% if user_signed_in? %>
+       <li><%= link_to current_user.nickname, "#", class: "user-nickname"  %></li>
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <% else %>
+       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+      </ul>
+      </div>
+      
+      </div>
+</header>
+<div class="n1">
+<h1>ToDo add</h1>
+<% if @done.errors.any? %>
+  <div class="alert alert-warning">
+    <ul>
+      <% @done.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@done) do |f| %>
+  <div><%= f.label :detail %></div>
+  <div><%= f.text_field :body %></div>
+  <div><input type="submit" value="追加" class="btn btn-success"></div>
+<% end %>
+<%= link_to '戻る', dones_path, class:"qwerty" %>
+</div>
+
+
+<footer>
+
+
+<%= image_tag "/assets/images/06062021055844A.png", class: "foot_logo"%>
+<address>dreamy</address>
+
+</footer>
+
+
+
+<div id="to_top"><a href="#"><%= image_tag "/assets/images/backtotop.png", class: "topback" %></a></div>
+
+
+
+
+</body>
+</html>

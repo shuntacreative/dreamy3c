@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>dreamy７</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<%= javascript_pack_tag 'memo/application' %>
+
+</head>
+<body>
+
+<header class="header_bg_01">
+
+  <nav id="g_navi">
+    <ul class="navi_base">
+      <li><%= link_to 'TOP', root_path %></li>
+      <li><%= link_to 'メンバー紹介', users_path %></li>
+      <li><%= link_to 'マイページ', '/users/show' %></li>
+    </ul>
+  </nav>
+  
+  <div class="bg_bl"></div>
+  
+   <h1><%= link_to image_tag("/assets/images/06062021055844A.png"), "/" %></h1>
+  
+  <div id="h_box_sp">
+  <div class="h_box">
+  <ul class="h_list">
+     <li><%= link_to 'カレンダー', tasks_index_path %></li>
+     <li><%= link_to 'メモ', tasks_new_path %></li>
+     <li><%= link_to 'ToDo', dones_path %></li>
+      
+  </ul>
+  <ul class="h_lang">
+       <% if user_signed_in? %>
+       <li><%= link_to current_user.nickname, "#", class: "user-nickname"  %></li>
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <% else %>
+       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+  </ul>
+  </div>
+  
+  </div>
+
+
+<div class="menu_btn">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+</div>
+
+
+</header>
+
+	<button class="add" id="add">
+		<i class="fas fa-plus"></i> Add note
+	</button>
+
+
+
+
+<div id="to_top"><a href="#"><%= image_tag "/assets/images/backtotop.png", class: "topback" %></a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
+
+
+
+</body>
+</html>
+
+  
